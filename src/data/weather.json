@@ -1,0 +1,48 @@
+{
+  "weather": [
+    {
+      "city": "New York",
+      "date": "2023-10-01",
+      "temperature": {
+        "min": 15,
+        "max": 22
+      },
+      "description": "Partly cloudy",
+      "humidity": 60,
+      "wind_speed": 5
+    },
+    {
+      "city": "Los Angeles",
+      "date": "2023-10-01",
+      "temperature": {
+        "min": 18,
+        "max": 28
+      },
+      "description": "Sunny",
+      "humidity": 50,
+      "wind_speed": 3
+    },
+    {
+      "city": "Chicago",
+      "date": "2023-10-01",
+      "temperature": {
+        "min": 10,
+        "max": 18
+      },
+      "description": "Cloudy",
+      "humidity": 70,
+      "wind_speed": 7
+    },
+    {
+      "city": "Miami",
+      "date": "2023-10-01",
+      "temperature": {
+        "min": 24,
+        "max": 30
+      },
+      "description": "Rainy",
+      "humidity": 80,
+      "wind_speed": 10
+    }
+  ]
+}
