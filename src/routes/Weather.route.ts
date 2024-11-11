@@ -7,5 +7,6 @@ const weatherRepository = new WeatherRepository();
 const weatherService = new WeatherService(weatherRepository);
 
 WeatherRoute.get("/all", weatherService.getAllWeatherData);
+WeatherRoute.get("/fetch", weatherService.fetchDataFromWeatherAPI);
 
 export default WeatherRoute;
