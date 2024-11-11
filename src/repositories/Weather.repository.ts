@@ -3,7 +3,7 @@ import path from "path";
 
 export default class WeatherRepository {
   findAll = () => {
-    const filePath = path.join(__dirname, "../../src/data/weather.json");
+    const filePath = path.join(__dirname, "../../src/database/weather.json");
     const data = fs.readFileSync(filePath, "utf-8");
     return JSON.parse(data);
   };
