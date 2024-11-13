@@ -1,10 +1,10 @@
 import morgan from "morgan";
 import chalk from "chalk";
-import logger from "@utils/Logger";
+import MyLogger from "@utils/Logger";
 
 const stream = {
   // Use the http severity
-  write: (message: any) => logger.http(message.trim()),
+  write: (message: any) => MyLogger.http(message.trim()),
 };
 const skip = () => {
   const env = process.env.NODE_ENV || "development";

@@ -35,10 +35,10 @@ const format = winston.format.combine(
 
 const transports = [new winston.transports.Console()];
 
-const logger = winston.createLogger({
+const MyLogger = winston.createLogger({
   level: level(),
   levels,
   format,
   transports,
 });
-export default logger;
+export default MyLogger;

@@ -1,12 +1,25 @@
+import redisConnection from "@database/redis.db";
+import { checkCache } from "@middlewares/weather.middleware";
 import WeatherRepository from "@repositories/Weather.repository";
 import WeatherService from "@services/Weather.service";
+import MyLogger from "@utils/Logger";
+import axios from "axios";
 import { Router } from "express";
 
 const WeatherRoute = Router();
 const weatherRepository = new WeatherRepository();
-const weatherService = new WeatherService(weatherRepository);
+const axiosInstance = axios.create();
+const redisClient = redisConnection;
+const Logger = MyLogger;
+
+const weatherService = new WeatherService(
+  weatherRepository,
+  axiosInstance,
+  redisClient,
+  Logger
+);
 
 WeatherRoute.get("/all", weatherService.getAllWeatherData);
-WeatherRoute.get("/fetch", weatherService.fetchDataFromWeatherAPI);
+WeatherRoute.get("/fetch", checkCache, weatherService.fetchDataFromWeatherAPI);
 
 export default WeatherRoute;
