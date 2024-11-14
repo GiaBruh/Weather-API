@@ -19,7 +19,6 @@ const weatherService = new WeatherService(
   Logger
 );
 
-WeatherRoute.get("/all", weatherService.getAllWeatherData);
 WeatherRoute.get("/fetch", checkCache, weatherService.fetchDataFromWeatherAPI);
 
 export default WeatherRoute;
