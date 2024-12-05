@@ -21,4 +21,8 @@ const weatherService = new WeatherService(
 
 WeatherRoute.get("/fetch", checkCache, weatherService.fetchDataFromWeatherAPI);
 
+WeatherRoute.get("/test", weatherService.test);
+
+WeatherRoute.get("/asyncTest", weatherService.testAsync);
+
 export default WeatherRoute;

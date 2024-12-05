@@ -1,6 +1,7 @@
 import morgan from "morgan";
 import chalk from "chalk";
 import MyLogger from "@utils/Logger";
+import { Request, Response } from "express";
 
 const stream = {
   // Use the http severity
@@ -41,8 +42,8 @@ const colorizeStatusCode = (code: string) => {
   return chalk.hex(color).bold(code);
 };
 
-const morganMiddleware = morgan(
-  (tokens, req, res) => {
+export const morganMiddleware = morgan(
+  (tokens, req: Request, res: Response) => {
     const method = tokens.method(req, res) || "undefined";
     const status = tokens.status(req, res) || "undefined";
     return [
@@ -57,5 +58,3 @@ const morganMiddleware = morgan(
   },
   { stream, skip }
 );
-
-export default morganMiddleware;
