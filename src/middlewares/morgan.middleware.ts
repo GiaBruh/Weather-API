@@ -13,13 +13,13 @@ const skip = () => {
 };
 
 const methodColors: { [key: string]: string } = {
-  GET: "#FFFFFF",
-  POST: "#8ADB18",
-  PUT: "#FFAA00",
-  PATCH: "#FFFF00",
+  GET: "#8ADB18",
+  POST: "#FFAA00",
+  PUT: "#00CCFF",
+  PATCH: "#8338ec",
   DELETE: "#FF0000",
-  OPTION: "#00CCFF",
-  HEAD: "#00CCFF",
+  OPTIONS: "#FF758f",
+  HEAD: "#8ADB18",
   DEFAULT: "#7E8694",
 };
 
@@ -28,7 +28,7 @@ const statusColors: { [key: string]: string } = {
   "3xx": "#FFFF00", // Yellow
   "4xx": "#FFAA00", // Orange
   "5xx": "#FF0000", // Red
-  DEFAULT: "#FFFFFF", // White
+  DEFAULT: "#7E8694", // White
 };
 
 const colorizeMethod = (method: string) => {

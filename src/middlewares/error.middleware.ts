@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import MyLogger from "@utils/Logger";
 import BadRequestError from "@lib/BadRequestError";
 import chalk from "chalk";
-import { error } from "console";
 import { inspect } from "util";
 
 export const errorHandler = (
